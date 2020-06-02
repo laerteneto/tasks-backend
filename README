@@ -1,0 +1,9 @@
+Mvn project using java spring as back-end
+
+Instructions:
+- Run mvn package (It may take a while)
+- Check that a file called tasks-backend.war was created inside the target folder
+- Go to your tomcat server running over the browser > access manager > WAR file to deploy
+- Select the tasks-backend.war file and click in deploy
+- Your application should be running nad listed into the applications table
+- To see the application running, just click in the link of the application name.
