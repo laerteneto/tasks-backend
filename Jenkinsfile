@@ -4,9 +4,14 @@ pipeline{
     stages{
         stage('Build Backend'){
             steps{
-                echo 'Backend Downloaded'
                 echo 'Building project'
                 sh 'mvn clean package -DskipTests=true'
+            }
+        }
+        stage('Unit Tests'){
+            steps{
+                echo 'Unit tests'
+                sh 'mvn test'
             }
         }
     }
