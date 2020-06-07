@@ -79,7 +79,7 @@ pipeline{
         unsuccessful{
             emailext body: 'Please, take a look in the logs bellow.', replyTo: 'larissacfdasilva@gmail.com', subject: 'Build $BUILD_NUMBER has failed', to: 'laerte-m@hotmail.com'
         }
-        successful{
+        success{
             emailext body: 'See the attached log bellow for more details.', replyTo: 'larissacfdasilva@gmail.com', subject: 'Build $BUILD_NUMBER results', to: 'laerte-m@hotmail.com'
         }
     }
