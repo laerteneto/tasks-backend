@@ -2,9 +2,11 @@ pipeline{
     agent any
 
     stages{
-        stage('Just Test'){
+        stage('Build Backend'){
             steps{
-                echo 'Teste realizado com sucesso!'
+                echo 'Backend Downloaded'
+                echo 'Building project'
+                sh 'mvn clean package -DskipTests=true'
             }
         }
     }
