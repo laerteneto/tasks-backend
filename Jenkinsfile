@@ -51,6 +51,16 @@ pipeline{
             }
         }
 
+        stage('Deploy Front'){
+            steps{
+                dir('frontend') {
+                    git credentialsId: 'github_login', url: 'https://github.com/laerteneto/tasks-frontend.git'
+                    sh 'mvn clean package -DskipTests=true'
+                    deploy adapters: [tomcat8(credentialsId: 'LoginTomcat', path: '', url: 'http://localhost:8001/')], contextPath: 'tasks', war: 'target/tasks.war'
+                }
+            }
+        }
+
     }
 }
 
