@@ -42,6 +42,13 @@ pipeline{
             }
         }
 
+        stage('API Test'){
+            steps{
+                git credentialsId: 'github_login', url: 'https://github.com/laerteneto/tasks-api-test.git'
+                sh 'mvn test'
+            }
+        }
+
     }
 }
 
