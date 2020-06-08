@@ -81,7 +81,7 @@ pipeline{
             emailext attachLog: true, body: 'Please, take a look in the logs bellow.', replyTo: 'larissacfdasilva@gmail.com', subject: 'Build $BUILD_NUMBER has failed', to: 'laerte-m@hotmail.com'
         }
         success{
-            emailext attachLog: true, body: 'See the attached log bellow for more details.', replyTo: 'larissacfdasilva@gmail.com', subject: 'Build $BUILD_NUMBER results', to: 'laerte-m@hotmail.com'
+            emailext attachLog: true, body: 'See the attached log bellow for more details.', replyTo: 'larissacfdasilva@gmail.com', subject: 'Build $BUILD_NUMBER - Success', to: 'laerte-m@hotmail.com'
         }
     }
 }
